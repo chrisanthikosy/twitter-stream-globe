@@ -58,7 +58,7 @@
 	  var shader = Shaders.earth;
 	  var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('/images/world-dark.jpg');
+	  uniforms['texture'].value = THREE.ImageUtils.loadTexture('https://static.turbosquid.com/Preview/2014/07/09__00_03_59/World_1.jpg2922d799-4ad6-4fea-990e-397fb85beadbOriginal.jpg');
 
 	  var material = new THREE.ShaderMaterial({
 	    uniforms: uniforms,
@@ -125,7 +125,7 @@
 		};
 		
 		var position = latLonToVector3(latlong.lat, latlong.lon);
-
+		if( 20<=latlong.lat && latlong.lat<=60 && -10<=latlong.lon && latlong.lon<=20 ){
 		addBeacon(position, tweet);
 	}
 
