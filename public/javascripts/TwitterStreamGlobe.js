@@ -125,7 +125,7 @@
 		};
 		
 		var position = latLonToVector3(latlong.lat, latlong.lon);
-
+                if( 20<=latlong.lat && latlong.lat<=60 && -10<=latlong.lon && latlong.lon<=20 ){
 		addBeacon(position, tweet);
 	}
 
@@ -163,7 +163,7 @@
 	 */ 
 	function render () {
 
-		earthMesh.rotation.y = earthMesh.rotation.y + 0.005;
+		earthMesh.rotation.y = earthMesh.rotation.y + 0.002;
 		
 	  renderer.autoClear = false;
 	  renderer.clear();
